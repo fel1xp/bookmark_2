@@ -8,9 +8,13 @@ So I can view my bookmarks,
 
 I want to show a list of my bookmarked URLs.
 
-## Domain model
+## MVC domain model
 
-user -> browser "url bookmarking platform homepage"  
-browser -> server "GET request"  
-server -> browser "response"  
-browser -> user "display '/' of bookmarking platform"  
+browser -> controller "GET request for homepage"  
+controller -> model "give me all the bookmarks!! (bookmarks.all)"  
+model -> controller "returns an array of bookmarked urls"  
+controller -> view "passes on the array of bookmarked urls"  
+view -> controller "html converting array to usable display (list?)"  
+controller -> browser "HTTP response"  
+
+
