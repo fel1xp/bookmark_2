@@ -1,17 +1,21 @@
+# frozen_string_literal: true
+
 require 'sinatra/base'
 require 'sinatra/reloader'
+require './lib/bookmarks'
 
-class BookmarkManager < Sinatra::Base 
-  configure :development do 
-    register Sinatra::Reloader 
+# BookmarkManager class is the controller
+
+class BookmarkManager < Sinatra::Base
+  configure :development do
+    register Sinatra::Reloader
   end
 
-  get '/' do 
+  get '/bookmarks' do
+    bookmark = Bookmark.new
+    @arr = bookmark.all
     erb :index
   end
 
-
-  run! if app_file == $0
-
-end 
-
+  run! if app_file == $PROGRAM_NAME
+end
