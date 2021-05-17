@@ -1,4 +1,8 @@
 <h1> Welcome to your Bookmark Manager </h1>
 <br>
-<%= @arr %>
+<ul>
+  <% @bookmarks.each do |bookmark| %>
+    <li><%= bookmark %> </li>
+  <% end %>
+</ul>
 

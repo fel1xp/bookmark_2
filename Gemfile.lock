@@ -89,6 +89,7 @@ DEPENDENCIES
   capybara
   rspec
   rubocop
+  simplecov
   sinatra
   sinatra-contrib
 

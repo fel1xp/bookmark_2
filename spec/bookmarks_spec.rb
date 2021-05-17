@@ -7,6 +7,8 @@ feature 'viewing bookmarks' do
     visit('/bookmarks')
 
     expect(page).to have_content"https://www.bbc.co.uk/cbeebies"
-    expect(page).to have_content"https://www.bbc.co.uk/cbeebies"
+    expect(page).to have_content"https://www.youtube.com"
+    expect(page).to have_content"https://www.ebay.co.uk"
+
   end
 end
