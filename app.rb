@@ -2,7 +2,7 @@
 
 require 'sinatra/base'
 require 'sinatra/reloader'
-require './lib/bookmarks'
+require './lib/bookmark'
 
 # BookmarkManager class is the controller
 
@@ -13,7 +13,7 @@ class BookmarkManager < Sinatra::Base
 
   get '/bookmarks' do
     @bookmarks = Bookmark.all
-    erb :index
+    erb :bookmarks
   end
 
   run! if app_file == $PROGRAM_NAME
